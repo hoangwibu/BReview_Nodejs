@@ -1,0 +1,64 @@
+<nav id="n">
+    <div class="navbar">
+      <i class='bx bx-menu'></i>
+      <div class="logo"><a href="#"><i class="fa-solid fa-book-quran"></i> BReview</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name"><a href="/"><i class="fa-solid fa-book-quran"></i> BReview</a></span>
+          <i class='bx bx-x'></i>
+        </div>
+        <ul class="links">
+          <li><a href="/">TRANG CHỦ</a></li>
+          <li>
+            <a href="#">DANH MỤC</a>
+            <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+            <ul class="htmlCss-sub-menu sub-menu">
+              <li><a href="#">Tiểu thuyết</a></li>
+              <li><a href="">Sách kinh doanh</a></li>
+              <li class="more">
+                <span><a href="#">Thể loại</a>
+                <i class='bx bxs-chevron-right arrow more-arrow'></i>
+              </span>
+                <ul class="more-sub-menu sub-menu">
+                  <li><a href="#">Viễn tưởng</a></li>
+                  
+                  <li><a href="#">Khoa học</a></li>
+                  <li><a href="#">Tình yêu</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">NGÔN NGỮ</a>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li><a href="/register">Tiếng Việt</a></li>
+              <li><a href="#">Tiếng Anh</a></li>
+              
+            </ul>
+          </li>
+          <li><a href="#">VỀ CHÚNG TÔI</a></li>
+        </ul>
+      </div>
+      <div class="search-box">
+        <i class='bx bx-search'></i>
+        <form class="input-box" method="get" action="/search">
+          <input type="text" name="t" placeholder="Search..." required>
+        </form>
+      </div>
+      <div class="account">
+        <a id="icon-account" href=""><i class="fa-solid fa-user"></i> {{#if user.name}} {{user.name}} {{else}} Account {{/if}}</a>
+        <ul class="account-sub">
+          {{#if (eq user.email "ngochoang27810@gmail.com")}}
+            <li><a href="/admin" target="_blank"><i class="fa-solid fa-gear"></i> Trang quản trị</a></li>
+            {{/if}}
+          {{#if user}}
+            <li><a href="/logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Đăng xuất</a></li>
+          {{else}}
+            <li><a href="/register"><i class="fa-solid fa-user-plus"></i> Đăng ký</a></li>
+            <li><a href="/login"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a></li>
+           {{/if}}
+        </ul>
+      </div>
+    </div>
+  </nav>

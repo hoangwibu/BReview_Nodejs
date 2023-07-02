@@ -1,0 +1,74 @@
+body{
+    background: url("https://anhdepfree.com/wp-content/uploads/2020/11/hinh-anh-background-ban-may-tinh.jpg") no-repeat;
+    background-size:1550px;
+    
+    
+}
+.container {
+    width: 500px;
+    height: fit-content;
+    margin: 150px auto;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 25px;
+    background-color: rgba(214, 245, 255, 0.4); /* Black w/opacity/see-through */
+    color: black;
+}
+.form-container{
+    margin-top: 150px;
+}
+.title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: bold;
+    color: rgb(41, 33, 33);
+}
+
+label {
+    width: 100%;
+    float: left;
+}
+
+.line {
+    width: fit-content;
+    margin: 16px 0;
+}
+
+.input,
+.genders {
+    width: 400px;
+    padding: 6px 15px;
+    margin-top: 5px;
+    outline: none;
+    border: 1px solid rgb(181, 181, 181);
+    border-radius: 5px;
+    color: black;
+}
+
+.line span {
+    margin-left: 25px;
+    color: #3f2222;
+}
+
+#btn {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    background-color: green;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+#btn:hover {
+    background-color: rgb(2, 165, 2);
+}
+
+.alert{
+    color: #d00404;
+}
+

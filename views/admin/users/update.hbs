@@ -1,0 +1,35 @@
+
+<div class="dash-content">
+    <div class="activity">
+        <div class="title">
+            <i class="uil uil-clock-three"></i>
+            <span class="text">Quản lý tài khoản</span>
+            <div class="create"><a href=""><i class="uil uil-plus"></i></a></div>
+        </div>
+        <div class="container">
+            
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="details personal">
+                        <span class="title"> + Cập nhật tài khoản</span>
+                        <div class="fields">
+                            <div class="input-field">
+                                <label>Họ tên</label>
+                                <input type="text" name="name" value="<?= $ten_kh ?>" placeholder="Tên sản phẩm" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Email</label>
+                                <input type="email" name="email" value="<?= $email ?>" placeholder="email" required>
+                            </div>
+                            <div class="input-field">
+                                <label>Mật khẩu</label>
+                                <input type="password" name="pass" value="<?= $mat_khau ?>" placeholder="Mật khẩu" required>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+        <button class="sumbit" type="submit" name="submit">
+            <span class="btn">Update</span>
+        </button>
+        </form>
+    </div>
+</div>

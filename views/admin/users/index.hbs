@@ -1,0 +1,60 @@
+<section class="dashboard">
+  <div class="top">
+    <i class="uil uil-bars sidebar-toggle"></i>
+
+    <div class="search-box">
+      <i class="uil uil-search"></i>
+      <input id="live-search" type="text" placeholder="Search...">
+    </div>
+  </div>
+  <div class="dash-content">
+    <div class="activity">
+      <div class="title">
+        <i class="uil uil-gold"></i>
+        <span class="text">Quản lí tài khoản</span>
+        <div class="create"><a href=""><i class="uil uil-plus"></i></a></div>
+      </div>
+
+      <table id="customers">
+        <tr>
+          <th><i class="uil uil-list-ol"></i> ID User</th>
+          <th><i class="uil uil-paragraph"></i> Tên</th>
+          <th><i class="uil uil-envelope"></i> Email</th>
+          <th><i class="uil uil-key-skeleton-alt"></i> Mật khẩu</th>
+          {{!-- <th><i class="uil uil-image"></i> Hình</th>
+          <th><i class="uil uil-presentation-edit"></i> Vai trò</th> --}}
+          <th><i class="uil uil-toggle-on"></i> Thời gian tạo</th>
+          <th> <i class="uil uil-file-edit-alt"></i> Action</th>
+        </tr>
+        {{#each users}}
+        <tr>
+          <td>
+            {{this.dataValues.userId}}
+          </td>
+          <td>
+            </h2>
+            {{this.dataValues.name}}
+            <h2>
+          </td>
+          <td>
+            {{this.dataValues.email}}
+          </td>
+          <td class="pw">
+              {{this.dataValues.password}}
+          </td>
+          {{!-- <td><img src="" width="80px" height="80px" style="object-fit: cover;"></td> --}}
+          
+          <td>
+            <p>
+              {{formatDate this.dataValues.createdAt}}
+            </p>
+          </td>
+          <td style="font-size: 30px;">
+            <a style="margin-right: 10px;" href=""><i class="uil uil-edit-alt"></i></a>
+            <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="/admin/users/delete/{{this.dataValues.userId}}"><i class="uil uil-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,89 @@
+<section class="dashboard">
+    <div class="top">
+        <i class="uil uil-bars sidebar-toggle"></i>
+
+        <div class="search-box">
+            <i class="uil uil-search"></i>
+            <input id="live-search" type="text" placeholder="Search...">
+        </div>
+    </div>
+    <div class="dash-content">
+        <div class="activity">
+            <div class="title">
+                <i class="uil uil-gold"></i>
+                <span class="text">Quản lí sách</span>
+                <div class="create"><a href="/admin/books/create"><i class="uil uil-plus"></i></a></div>
+            </div>
+
+            <table id="customers">
+                <tr>
+                    <th><i class="uil uil-list-ol"></i> ID</th>
+                    <th><i class="uil uil-paragraph"></i> Title</th>
+                    <th><i class="uil uil-image"></i> Hình</th>
+                    <th><i class="uil uil-chat-bubble-user"></i> Tác giả</th>
+                    <th><i class="uil uil-comment-chart-line"></i> Số bình luận</th>
+                    <th><i class="uil uil-chart-pie-alt"></i> Năm phát hành</th>
+                    <th><i class="uil uil-list-ui-alt"></i> Thể loại</th>
+                    <th> <i class="uil uil-file-edit-alt"></i> Action</th>
+                </tr>
+                {{#each books}}
+                <tr>
+                    <td>
+                        {{this.dataValues.bookId}}
+                    </td>
+                    <td>
+                        </h2>
+                        {{this.dataValues.title}}
+                        <h2>
+                    </td>
+                    <td><img src="/images/{{this.dataValues.image}}" width="80px" height="100px" style="object-fit: cover;"></td>
+                    <td>
+                        {{this.dataValues.author}}
+                    </td>
+                    <td>
+                        <p>
+                            {{this.dataValues.commentCount}}
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            {{this.dataValues.publishing}}
+                        </p>
+                    </td>
+                    <td>
+                        <p>
+                            {{this.dataValues.category}}
+                        </p>
+                    </td>
+                    <td style="font-size: 30px;"><a style="margin-right: 10px;" href="/admin/books/update/{{this.dataValues.bookId}}"><i
+                                class="uil uil-edit-alt"></i></a>
+                        <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="/admin/books/delete/{{this.dataValues.bookId}}"><i class="uil uil-trash"></i></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("#live-search").keyup(function() {
+      if (input != '') {
+        var input = $(this).val()
+        $("#customers").css("display", "")
+        $.ajax({
+          url: 'liveSearch',
+          method: 'POST',
+          data: {
+            keySearch: input
+          },
+          success: function(data) {
+            $("#customers").html(data.results)
+          }
+        })
+      } else {
+        $("#a").css("display", "none")
+      }
+    })
+  })
+</script>

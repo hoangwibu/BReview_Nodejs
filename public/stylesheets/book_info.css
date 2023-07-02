@@ -1,0 +1,186 @@
+.main{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-bottom: 20px;
+}
+.main .book-info{
+}
+.main .book-info .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main .book-info .row .left-info{
+    flex: 0 0 25%;
+    text-align: center;
+    max-width: 25%;
+}
+.main .book-info .row .left-info img{
+    width: 90%;
+    margin: auto;
+}
+.main .book-info .row .right-info{
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding: 10px 20px;
+    border: 2px solid rgb(59, 59, 59);
+}
+.main .book-info .row .right-info .book-title{
+    font-family:cursive
+}
+.main .book-info .row .right-info .tag-info{
+    margin: 10px 5px;
+}
+.main .book-info .row .right-info .feat-info{
+    width: fit-content;
+}
+.main .book-info .row .right-info .feat-info .ratings{
+    display: flex; 
+    gap: 10px;
+    margin: 5px;
+    
+}
+.main .book-info .row .right-info .feat-info .ratings .stars i{
+    color: yellow;
+}
+.main .description{
+    padding: 10px;
+    border: 1px solid rgb(95, 95, 95);
+}
+.main .description p{
+    font-family: monospace;
+    font-size: large;
+}
+.main .description h4{
+    padding: 10px;
+}
+.community {
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 90%;
+    padding: 20px;
+    background-color: #2e2e2e;
+    box-shadow: 0px 0px 10px #888888;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.community h1 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.community form {
+    margin-bottom: 20px;
+}
+
+.community form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.community form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #414141;
+}
+
+.community form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.community .comments {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.community .comment {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #4d4d4d;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #828282;
+    display: flex;
+    align-items: center;
+}
+
+.community .comment img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.community .comment h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.community .comment p {
+    margin-top: 0;
+}
+small{
+    font-size: small; color: #b8b8b8;
+}
+
+.rate {
+    border: 1px solid #cccccc;
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+
+.rate:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate>input:checked~label {
+    color: #ffc700;
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+    color: #deb217;
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+    color: #c59b08;
+}
+
+.description .content {
+    max-height: 70px;
+    overflow: hidden;
+  }
+  
+  .description .content.collapsed {
+    max-height: none;
+  }
+.description .read-more{
+    font-size: small;
+}  

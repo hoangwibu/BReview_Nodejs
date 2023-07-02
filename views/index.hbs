@@ -1,0 +1,65 @@
+<div class="main">
+    <section class="trending slide-container">
+      <h2 class="hot"><i class="fa-solid fa-globe"></i> Phổ biến</h2>
+      <div class="button-slide">
+        <button id="prev"><i class="fa-solid fa-circle-chevron-left"></i></button>
+        <button id="next"><i class="fa-solid fa-circle-chevron-right"></i></button>
+      </div>
+      <div class="list-trending slide">
+        {{#each pops}}
+        <div class="item-trending">
+            <div class="item-img">
+                <a href="book/{{this.dataValues.bookId}}">
+                    <img src="images/{{this.dataValues.image}}" alt="noen">
+                </a>
+            </div>
+            <div class="book-name"><a href="#">{{this.dataValues.title}}</a></div>
+        </div>
+        {{/each}}
+        {{!-- <div class="item-trending">
+            <div class="item-img">
+                <a href="#">
+                    <img src="https://covers.openlibrary.org/b/id/13325542-M.jpg" alt="noen">
+                </a>
+            </div>
+          <div class="book-name"><a href="#">Name of book 1</a></div>
+        </div> --}}
+      </div>
+    </section>
+    <section class="trending slide-container">
+      <h2><i class="fa-solid fa-arrow-trend-up"></i> Trending</h2>
+      <div class="button-slide">
+        <button id="prev"><i class="fa-solid fa-circle-chevron-left"></i></button>
+        <button id="next"><i class="fa-solid fa-circle-chevron-right"></i></button>
+      </div>
+      <div class="list-trending slide">
+        {{#each trending}}
+        <div class="item-trending">
+            <div class="item-img">
+                <a href="book/{{this.dataValues.bookId}}">
+                    <img src="images/{{this.dataValues.image}}" alt="noen">
+                </a>
+            </div>
+            <div class="book-name"><a href="#">{{this.dataValues.title}}</a></div>
+        </div>
+        {{/each}}
+    </section>
+    <section class="trending slide-container">
+      <h2 class="new"><i class="fa-brands fa-hotjar"></i> Sách mới</h2>
+      <div class="button-slide">
+        <button id="prev"><i class="fa-solid fa-circle-chevron-left"></i></button>
+        <button id="next"><i class="fa-solid fa-circle-chevron-right"></i></button>
+      </div>
+      <div class="list-trending slide">
+        {{#each news}}
+        <div class="item-trending">
+            <div class="item-img">
+                <a href="book/{{this.dataValues.bookId}}">
+                    <img src="images/{{this.dataValues.image}}" alt="noen">
+                </a>
+            </div>
+            <div class="book-name"><a href="#">{{this.dataValues.title}}</a></div>
+        </div>
+        {{/each}}
+    </section>
+  </div>
